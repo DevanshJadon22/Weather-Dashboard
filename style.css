@@ -5,15 +5,14 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    /* IMPORTANT: Add a transition for smooth background changes */
+    /* IMPORTANT: Adds a smooth transition for background changes */
     transition: background 0.8s ease-in-out;
     background: linear-gradient(to right, #6dd5ed, #2193b0); /* Default background */
 }
 
 /* --- Dynamic Background Classes --- */
 body.sunny { background: linear-gradient(to right, #FFC371, #FF5F6D); }
-/* UPDATED: Darker, more distinct cloudy background */
-body.cloudy { background: linear-gradient(to right, #788c96, #4c5c68); }
+body.cloudy { background: linear-gradient(to right, #788c96, #4c5c68); } /* Darker for better contrast */
 body.rainy { background: linear-gradient(to right, #485563, #29323c); }
 body.snowy { background: linear-gradient(to right, #e6dada, #bdc3c7); }
 body.stormy { background: linear-gradient(to right, #232526, #414345); }
@@ -21,7 +20,7 @@ body.misty { background: linear-gradient(to right, #606c88, #3f4c6b); }
 
 
 .weather-container {
-    background: rgba(255, 255, 255, 0.95); /* Made slightly more opaque */
+    background: rgba(255, 255, 255, 0.95);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -97,7 +96,7 @@ h1 {
 #customVisual {
     font-size: 60px;
     line-height: 1;
-    /* UPDATED: Replaced filter with a more effective text-shadow */
+    /* Adds a shadow to make the emoji pop */
     text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 

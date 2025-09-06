@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <title>Dynamic Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +15,16 @@
         </div>
         <div id="weather-info" class="hidden">
             <h2 id="cityName"></h2>
-            <img id="weatherIcon" src="" alt="Weather Icon">
+            <div class="icon-display">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+                <span id="customVisual"></span>
+            </div>
             <p id="temperature"></p>
             <p id="description"></p>
             <p id="humidity"></p>
             <p id="wind"></p>
+            <p id="feelsLike"></p>
+            <p id="pressure"></p>
         </div>
          <p id="error-message" class="hidden"></p>
     </div>
