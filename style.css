@@ -1,21 +1,34 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    /* IMPORTANT: Add a transition for smooth background changes */
+    transition: background 0.8s ease-in-out;
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* Default background */
 }
 
+/* --- Dynamic Background Classes --- */
+body.sunny { background: linear-gradient(to right, #FFC371, #FF5F6D); }
+/* UPDATED: Darker, more distinct cloudy background */
+body.cloudy { background: linear-gradient(to right, #788c96, #4c5c68); }
+body.rainy { background: linear-gradient(to right, #485563, #29323c); }
+body.snowy { background: linear-gradient(to right, #e6dada, #bdc3c7); }
+body.stormy { background: linear-gradient(to right, #232526, #414345); }
+body.misty { background: linear-gradient(to right, #606c88, #3f4c6b); }
+
+
 .weather-container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95); /* Made slightly more opaque */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 90%;
     max-width: 450px;
+    margin: 20px;
 }
 
 h1 {
@@ -30,7 +43,7 @@ h1 {
 }
 
 #cityInput {
-    width: 70%;
+    flex-grow: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
@@ -59,6 +72,7 @@ h1 {
 
 #weather-info h2 {
     margin-bottom: 10px;
+    color: #333;
 }
 
 #weather-info p {
@@ -67,9 +81,24 @@ h1 {
     color: #555;
 }
 
+.icon-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 #weatherIcon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+#customVisual {
+    font-size: 60px;
+    line-height: 1;
+    /* UPDATED: Replaced filter with a more effective text-shadow */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .hidden {
@@ -79,4 +108,5 @@ h1 {
 #error-message {
     color: #d9534f;
     margin-top: 15px;
+    font-weight: bold;
 }
